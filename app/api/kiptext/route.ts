@@ -2,6 +2,9 @@
 import { NextResponse } from "next/server";
 import { KIPTEXTOKE, KIPTEXT, mapFromOrigin } from "@/app/kiptext"; // Adjust path if needed
 
+// ✅ Add this line for Edge compatibility
+export const runtime = 'edge';
+
 const MAX_NUMBER = 9999999999;
 
 export async function GET(req: Request) {
